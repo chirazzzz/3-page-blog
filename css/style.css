@@ -1,103 +1,145 @@
 body {
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #707070;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
- /* =================
-    Typography
-    ================= */
+/* =================
+  Typography
+  ================= */
+h1,
+h2,
+h3 {
+  color: #143774;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+}
 
 h1 {
-    color: #143774;
-    font-family: 'Lora', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    margin: 0;
+  font-size: 2rem;
+  margin: 0;
 }
 
-.sub {
-    color: #1792D2;
-    font-size: 0.75rem;
-    font-weight: 700;
-    margin: 0;
+strong {
+  font-weight: 700;
 }
 
+a {
+  color: #1792D2;
+}
 
- /* =================
-    Layout
-    ================= */
+a:hover,
+a:focus {
+  color: #143774;
+  text-decoration: none;
+}
+
+/* h1 subtitle */
+.subtitle {
+  color: #1792D2;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.article-title {
+  font-size: 1.5rem;
+}
+
+.article-info,
+.article-read-more {
+  font-size: 0.875em;
+}
+
+.article-read-more {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #143774;
+  text-decoration: underline;
+}
+
+/* =================
+  Layout
+  ================= */
 
 .container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .container-nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 header {
-    background: #f8f8f8;
-    padding: 2em 0;
+  background: #f8f8f8;
+  padding: 2em 0;
 }
 
 @media (max-width: 690px) {
-    .container-nav {
-        flex-direction: column;
-    }
+  .container-nav {
+    flex-direction: column;
+  }
 
-    header {
-        text-align: center;
-    }
+  header {
+    text-align: center;
+  }
 }
 
 /* navigation */
 
 .nav-list {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-list-item {
-    margin-left: 2em;
+  margin-left: 1.5em;
 }
 
 .nav-link {
-    color: #707070;
-    text-decoration: none;
-    font-weight: 700;
-    padding: .25em 0;
+  color: #707070;
+  text-decoration: none;
+  font-weight: 700;
+  padding: .25em 0;
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #1792D2;
+  color: #1792D2;
 }
 
 /* Clearly shows which is current page */
 .current-page {
-    border-bottom: 1px solid #707070;
+  border-bottom: 1px solid #707070;
 }
 
 /* Makes current page link not change color. No need to change because already on that page! */
 .current-page:hover {
-    color: #707070;
+  color: #707070;
 }
 
 @media (max-width: 690px) {
-    .nav-list {
-        flex-direction: column;
-    }
+  .nav-list {
+    flex-direction: column;
+  }
 
-    .nav-list-item {
-        margin: .5em;
-    }
+  .nav-list-item {
+    margin: .5em;
+  }
 }
