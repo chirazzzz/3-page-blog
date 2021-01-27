@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+ /* =================
+    Typography
+    ================= */
+
+h1 {
+    color: #143774;
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sub {
+    color: #1792D2;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+ /* =================
+    Layout
+    ================= */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 2em 0;
+}
+
+@media (max-width: 690px) {
+    .container-nav {
+        flex-direction: column;
+    }
+
+    header {
+        text-align: center;
+    }
+}
+
+/* navigation */
+
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list-item {
+    margin-left: 2em;
+}
+
+.nav-link {
+    color: #707070;
+    text-decoration: none;
+    font-weight: 700;
+    padding: .25em 0;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #1792D2;
+}
+
+/* Clearly shows which is current page */
+.current-page {
+    border-bottom: 1px solid #707070;
+}
+
+/* Makes current page link not change color. No need to change because already on that page! */
+.current-page:hover {
+    color: #707070;
+}
+
+@media (max-width: 690px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list-item {
+        margin: .5em;
+    }
+}
