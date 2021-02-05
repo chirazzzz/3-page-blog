@@ -1,26 +1,31 @@
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.125rem;
   font-weight: 300;
-  color: #707070;
 }
 
-/* Standard img css - wil cure many issues! */
 img {
   max-width: 100%;
   display: block;
 }
 
 /* =================
-  Typography
-  ================= */
-h1,
+Typography
+================= */
+
+h1, 
 h2,
 h3 {
-  color: #143774;
   font-family: 'Lora', serif;
   font-weight: 400;
+  color: #143774;
 }
 
 h1 {
@@ -28,25 +33,24 @@ h1 {
   margin: 0;
 }
 
-strong {
-  font-weight: 700;
-}
-
 a {
-  color: #1792D2;
+  color: #1792d2;
 }
 
 a:hover,
 a:focus {
   color: #143774;
-  text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
 }
 
 /* h1 subtitle */
 .subtitle {
-  color: #1792D2;
-  font-size: 0.75rem;
   font-weight: 700;
+  color: #1792d2;
+  font-size: .75rem;
   margin: 0;
 }
 
@@ -54,15 +58,15 @@ a:focus {
   font-size: 1.5rem;
 }
 
-.article-info,
-.article-read-more {
-  font-size: 0.875em;
+.article-read-more,
+.article-info {
+  font-size: .875rem;
 }
 
 .article-read-more {
-  font-weight: 700;
-  text-transform: uppercase;
+  color: #1792d2;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .article-read-more:hover,
@@ -71,9 +75,14 @@ a:focus {
   text-decoration: underline;
 }
 
+.article-info {
+  margin: 2em 0;
+}
+
+
 /* =================
-  Layout
-  ================= */
+Layout
+================= */
 
 .container {
   width: 90%;
@@ -83,72 +92,77 @@ a:focus {
 
 .container-flex {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 header {
   background: #f8f8f8;
   padding: 2em 0;
+  text-align: center;
 }
 
-@media (max-width: 690px) {
+@media (min-width: 675px) {
   .container-flex {
-    flex-direction: column;
+      flex-direction: row;
   }
-
-  header {
-    text-align: center;
+  
+  main {
+      width: 75%;
+  }
+  
+  aside {
+      width: 20%;
   }
 }
 
-main {
-  width: 70%;
-}
-
-aside {
-  width: 25%;
-}
 /* navigation */
 
-.nav-list {
+nav ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
 
-.nav-list-item {
-  margin-left: 1.5em;
+nav li {
+  margin-left: 2em;
 }
 
-.nav-link {
-  color: #707070;
+nav a {
   text-decoration: none;
+  color: #707070;
   font-weight: 700;
   padding: .25em 0;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #1792D2;
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
 }
 
-/* Clearly shows which is current page */
 .current-page {
   border-bottom: 1px solid #707070;
 }
 
-/* Makes current page link not change color. No need to change because already on that page! */
 .current-page:hover {
   color: #707070;
 }
 
-@media (max-width: 690px) {
-  .nav-list {
-    flex-direction: column;
+@media (max-width: 675px) {
+  nav ul {
+      flex-direction: column;
   }
+  
+  nav li {
+      margin: .5em 0;
+  }
+}
 
-  .nav-list-item {
-    margin: .5em;
-  }
+/* Articles */
+
+.article-featured {
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  border-bottom: 2px rgba(112, 112, 112, 0.5) solid;
 }
