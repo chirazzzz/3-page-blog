@@ -1,9 +1,3 @@
-/*  Fonts
------
-font-family: 'Lora', serif;
-font-family: 'Ubuntu', sans-serif;
-*/
-
 body {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
@@ -80,6 +74,15 @@ strong {
   margin: 2em 0;
 }
 
+.widget-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.widget-recent-post-title {
+  font-size: 1rem;
+}
 
 /* =================
 Layout
@@ -110,11 +113,11 @@ header {
   }
   
   main {
-      width: 75%;
+      width: 65%;
   }
   
   aside {
-      width: 20%;
+      width: 30%;
   }
 }
 
@@ -185,28 +188,57 @@ nav a:focus {
 
 @media (min-width: 676px) {
   .article-featured {
-      display: flex; /* order cannot work unless parent has display: flex */
-      flex-direction: column; /* needed to fix evetthing that breaks with flex */
+    display: flex; /* order cannot work unless parent has display: flex */
+    flex-direction: column; /* needed to fix evetthing that breaks with flex */
+  }
+
+  .article-featured-image {
+    order: -2; /* first element */
+  }
+
+  .article-info {
+    order: -1; /* second element followed by rest of .article-featured */
   }
   
   .article-image {
-      order: -2; /* first element */
-  }
-  
-  .article-info {
-      order: -1; /* second element followed by rest of .article-featured */
+    width: 100%;
+    min-height: 250px;    
+    object-fit: cover; /* Allows same image to be cropped differently on page */
   }
   
   .article-recent {
-      flex-direction: row;
-      justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
   
   .article-recent-main {
-      width: 65%;
+    width: 60%;
   }
   
   .article-recent-secondary {
-      width: 30%;
+    width: 35%;
   }
+}
+
+/* widgets */
+
+.sidebar-widget {
+  border: 20px solid #E4E4E4;
+  padding: 1em 1em 0 1em;
+  margin-bottom: 3em;
+}
+
+.widget-recent-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-recent-post:not(:last-child) {
+  border-bottom: 1px #707070 solid;
+  margin-bottom: 1.125em;
+}
+
+.widget-image {
+  order: -1;
+  margin-bottom: 1em;
 }
