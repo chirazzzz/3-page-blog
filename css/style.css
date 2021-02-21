@@ -4,6 +4,7 @@ body {
   font-size: 1.125rem;
   font-weight: 300;
   color: #383838;
+  line-height: 1.6;
 }
 
 img {
@@ -48,6 +49,9 @@ strong {
   color: #1792d2;
   font-size: .75rem;
   margin: 0;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .article-title {
@@ -63,6 +67,8 @@ strong {
   color: #1792d2;
   text-decoration: none;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .article-read-more:hover,
@@ -79,6 +85,8 @@ strong {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .widget-recent-post-title {
@@ -108,7 +116,7 @@ header {
   margin-bottom: 3em;
 }
 
-@media (min-width: 675px) {
+@media (min-width: 700px) {
   .container-flex {
       flex-direction: row;
   }
@@ -123,9 +131,10 @@ header {
 }
 
 footer {
-  background-color: #143774;
+  background: #143774;
   text-align: center;
-  color: #FFFFFF;
+  /* rgba allows little but of background to bleed through white text */
+  color: rgba(255, 255, 255, 0.7);
   padding: 2em 0;
 }
 
@@ -139,13 +148,15 @@ nav ul {
 }
 
 nav li {
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 nav a {
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
   color: #707070;
+  font-size: 1rem;
   font-weight: 700;
   padding: .25em 0;
 }
@@ -163,7 +174,7 @@ nav a:focus {
   color: #707070;
 }
 
-@media (max-width: 675px) {
+@media (max-width: 699px) {
   nav ul {
       flex-direction: column;
   }
